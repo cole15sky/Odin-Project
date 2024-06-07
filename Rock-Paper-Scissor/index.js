@@ -9,5 +9,15 @@ console.log(choices[finalchoices]);
 }
 Computerchoice();
 
+//function to display users choices.
+function humanChoice(){
+    var Hchoices = (prompt("enter the choices"))
+    console.log(Hchoices);
+}
+humanChoice()
+
+
+
+
 
  
