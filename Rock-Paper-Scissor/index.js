@@ -40,3 +40,57 @@ function checkWinner(humanSelection, ComputerSelection) {
         return "Tie";
     }
 }
+
+
+
+function playRound(humanSelection, ComputerSelection) {
+    const result = checkWinner(humanSelection, ComputerSelection);
+    if (result == "Tie") {
+        return `It's a Tie`;
+    }
+    else if (result == "Human") {
+        return `You wins! ${humanSelection} beats ${ComputerSelection}`
+    }
+    else {
+        return `You loose! ${ComputerSelection} beats ${humanSelection}`
+    }
+
+
+}
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        const humanSelection = humanChoice();
+        const ComputerSelection = ComputerChoice();
+        console.log(playRound(humanSelection, ComputerSelection));
+        console.log("---------")
+
+
+
+        if (checkWinner(humanSelection, ComputerSelection) == "Computer") {
+            Computer_Score++
+        }
+        else if (checkWinner(humanSelection, ComputerSelection) == "Human") {
+            Human_Score++
+        }
+    }
+    console.log(`Game Over!!`)
+    if (Computer_Score > Human_Score) {
+        console.log(`Computer is the Winner.`)
+    }
+    else if (Human_Score > Computer_Score) {
+        console.log(`Human Wins`)
+    }
+    else {
+        `We have a Tie!`
+    }
+}
+game();
+
+
+
+
+
+
+
+
