@@ -86,11 +86,3 @@ function game() {
     }
 }
 game();
-
-
-
-
-
-
-
-
